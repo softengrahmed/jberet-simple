@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Application Monitoring Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Job Execution Time",
+        "targets": [
+          {
+            "expr": "job_execution_time",
+            "legendFormat": "Job Execution Time",
+            "refId": "A"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Completion Status",
+        "targets": [
+          {
+            "expr": "job_completion_status",
+            "legendFormat": "Job Completion Status",
+            "refId": "B"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Latency",
+        "targets": [
+          {
+            "expr": "latency",
+            "legendFormat": "Latency",
+            "refId": "C"
+          }
+        ]
+      }
+    ],
+    "templating": {
+      "list": []
+    },
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "5s"
+  }
+}
