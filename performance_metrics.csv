@@ -1,0 +1,10 @@
+metric_name,description
+batch_job_execution_time,Measures the total time taken for the batch job to complete
+batch_job_status,Tracks the status of the batch job (e.g., COMPLETED, FAILED, STOPPED)
+array_item_reader_read_count,Tracks the number of items read by the arrayItemReader
+mock_item_writer_write_count,Tracks the number of items written by the mockItemWriter
+batch_job_error_count,Counts the number of errors encountered during job execution
+batch_job_retry_count,Tracks the number of retries for failed steps
+batch_job_memory_usage,Monitors memory usage during job execution
+batch_job_cpu_usage,Monitors CPU usage during job execution
+batch_job_timeout_count,Counts the number of jobs that exceed the specified timeout
