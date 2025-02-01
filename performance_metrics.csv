@@ -1,0 +1,16 @@
+metric_name,description,source
+job_execution_time,Measures the time taken for a batch job to complete,Test Code Analysis
+job_completion_status,Tracks the status of batch jobs (e.g., COMPLETED, FAILED),Test Code Analysis
+job_start_end_timestamps,Tracks when jobs start and finish,Test Code Analysis
+latency,Measures the time taken to service a request or job,Four Golden Signals
+traffic,Tracks the number of requests or jobs processed,Four Golden Signals
+errors,Measures the rate of failed requests or jobs,Four Golden Signals
+saturation,Tracks resource utilization (e.g., CPU, memory),Four Golden Signals
+job_throughput,Measures the number of jobs processed per unit time,Batch Job-Specific Metrics
+job_failure_rate,Tracks the percentage of failed jobs,Batch Job-Specific Metrics
+job_retry_count,Tracks the number of retries for failed jobs,Batch Job-Specific Metrics
+utilization,Measures the percentage of resource usage,USE Method
+job_duration,Measures the time taken to process individual jobs,RED Method
+job_rate,Tracks the number of jobs processed per second,RED Method
+job_error_count,Tracks the count of errors during job execution,RED Method
+job_resource_saturation,Tracks the degree to which resources are overloaded during job execution,USE Method
