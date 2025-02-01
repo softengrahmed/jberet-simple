@@ -1,0 +1,123 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Batch Job Monitoring Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Batch Job Execution Time",
+        "targets": [
+          {
+            "expr": "batch_job_execution_time_seconds",
+            "legendFormat": "Execution Time"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Batch Job Success Rate",
+        "targets": [
+          {
+            "expr": "batch_job_success_rate",
+            "legendFormat": "Success Rate"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Batch Job Failure Count",
+        "targets": [
+          {
+            "expr": "batch_job_failure_count",
+            "legendFormat": "Failure Count"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Batch Job Throughput",
+        "targets": [
+          {
+            "expr": "batch_job_throughput",
+            "legendFormat": "Throughput"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "CPU Utilization",
+        "targets": [
+          {
+            "expr": "cpu_utilization_percentage",
+            "legendFormat": "CPU Utilization"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Memory Usage",
+        "targets": [
+          {
+            "expr": "memory_usage_bytes",
+            "legendFormat": "Memory Usage"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Disk I/O Operations",
+        "targets": [
+          {
+            "expr": "disk_io_operations_per_second",
+            "legendFormat": "Disk I/O"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Network Latency",
+        "targets": [
+          {
+            "expr": "network_latency_seconds",
+            "legendFormat": "Network Latency"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Queue Length",
+        "targets": [
+          {
+            "expr": "job_queue_length",
+            "legendFormat": "Queue Length"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Retry Count",
+        "targets": [
+          {
+            "expr": "job_retry_count",
+            "legendFormat": "Retry Count"
+          }
+        ]
+      }
+    ],
+    "templating": {
+      "list": [
+        {
+          "type": "datasource",
+          "name": "Prometheus",
+          "query": "prometheus",
+          "current": {
+            "text": "Prometheus",
+            "value": "Prometheus"
+          }
+        }
+      ]
+    },
+    "schemaVersion": 16,
+    "version": 0
+  }
+}
