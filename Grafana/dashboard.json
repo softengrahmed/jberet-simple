@@ -1,0 +1,85 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Batch Job Monitoring",
+    "tags": [],
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "5s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Job Execution Time",
+        "targets": [
+          {
+            "expr": "job_execution_time",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "id": 1
+      },
+      {
+        "type": "graph",
+        "title": "Job Success Rate",
+        "targets": [
+          {
+            "expr": "job_success_rate",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "id": 2
+      },
+      {
+        "type": "graph",
+        "title": "Job Failure Rate",
+        "targets": [
+          {
+            "expr": "job_failure_rate",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "id": 3
+      },
+      {
+        "type": "graph",
+        "title": "Job Throughput",
+        "targets": [
+          {
+            "expr": "job_throughput",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "id": 4
+      },
+      {
+        "type": "graph",
+        "title": "System Resource Utilization",
+        "targets": [
+          {
+            "expr": "system_resource_utilization",
+            "legendFormat": "{{resource}}",
+            "refId": "A"
+          }
+        ],
+        "id": 5
+      },
+      {
+        "type": "graph",
+        "title": "Job Queue Length",
+        "targets": [
+          {
+            "expr": "job_queue_length",
+            "legendFormat": "{{queue}}",
+            "refId": "A"
+          }
+        ],
+        "id": 6
+      }
+    ]
+  }
+}
