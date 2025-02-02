@@ -1,0 +1,143 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Batch Job Monitoring",
+    "tags": [],
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "5s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Job Execution Time",
+        "targets": [
+          {
+            "expr": "job_execution_time",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "s",
+            "label": "Time (seconds)"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Success Rate",
+        "targets": [
+          {
+            "expr": "job_success_rate",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "percent",
+            "label": "Success Rate (%)"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Failure Rate",
+        "targets": [
+          {
+            "expr": "job_failure_rate",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "percent",
+            "label": "Failure Rate (%)"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Throughput",
+        "targets": [
+          {
+            "expr": "job_throughput",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "short",
+            "label": "Jobs per second"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "System Resource Utilization",
+        "targets": [
+          {
+            "expr": "system_cpu_usage",
+            "legendFormat": "CPU Usage",
+            "refId": "A"
+          },
+          {
+            "expr": "system_memory_usage",
+            "legendFormat": "Memory Usage",
+            "refId": "B"
+          },
+          {
+            "expr": "system_io_usage",
+            "legendFormat": "I/O Usage",
+            "refId": "C"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "percent",
+            "label": "Usage (%)"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Job Queue Length",
+        "targets": [
+          {
+            "expr": "job_queue_length",
+            "legendFormat": "{{job}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time"
+        },
+        "yaxes": [
+          {
+            "format": "short",
+            "label": "Number of Jobs"
+          }
+        ]
+      }
+    ]
+  }
+}
